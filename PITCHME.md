@@ -50,14 +50,15 @@
 
 ### Basic matching
 
+@ul
  * A letter or number matches that specific letter or number
  * `.` matches any character
- * Ranges: match the characters in the brackets: `[ABC]` matches `A` or `B` or `C`.
- * Ranges can use a `-` as a shortcut: `[A-Z]` matches `A` or `B` or ... or `Z`.
- * Ranges can have multiple shortcuts: `[A-Z0-9]` matches any letter or number
- * Ranges that can match a `-` must have it as the first character: `[-A-Z]` matches any letter or `-`.
+ * `[ABC]` are ranges that match the characters in the brackets
+ * `[A-Z]` shortcut.
+ * `[A-Z0-9]` multiple shortcuts in a single range
+ * `-` must be the first character: `[-A-Z]` matches any letter or `-`.
  * More advanced: [Character classes](#character-classes) are shortcuts for common ranges.
-
+@ulend
 +++
 
 ### Basic Matching Examples:
@@ -96,6 +97,8 @@ How many times a match can/must occur.
 
 ### Numeric Quantifiers
 
+Exactly how many times a match can/must occur.
+
  * `{n}`: exactly `n` times
  * `{n,}`: `n` or more times
  * `{n,m}`: between `n` and `m` times
@@ -120,8 +123,6 @@ How many times a match can/must occur.
 
  * Extra `?` make it lazy
  * Non-greedy quantifiers affect later matches after the match
-
-
 
 ---
 
