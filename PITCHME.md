@@ -8,9 +8,9 @@
 
  * @fa[arrow-right] Next slide
  * @fa[arrow-left] Previous slide
- * F - Full screen
- * O - Thumbnail navigation
- * S - Speaker notes
+ * *F* - Full screen
+ * *O* - Thumbnail navigation
+ * *S* - Speaker notes
 
 ---
 
@@ -22,9 +22,17 @@
 ---
 
 ### Problems that they can solve
-
  
+ * finding/normalizing manually entered data
+ * multiple spellings
+ 
+---
 
+### Problems that is *NOT* good for
+
+ * parsing HTML
+ * parsing CSV
+ 
 ---
 
 ### Pros and Cons
@@ -64,7 +72,7 @@
 
 ### Quantifiers
 
-Quantifiers control how many times a match can/must occur.
+How many times a match can/must occur.
 
  * `?`: zero or once
  * `*`: zero or more
@@ -94,14 +102,30 @@ Quantifiers control how many times a match can/must occur.
 Anchors control where a match can occur
 
  * `^`: beginning of the line
- * '$': end of the line
- * '\A': beginning of string
- * '\Z': end of string
+ * `$`: end of the line
+ * `\A`: beginning of string
+ * `\Z`: end of string
 
 ---
 
-### Anchor Examples
+### Modifiers
 
+DANGER: vary by implementation!
+
+ * `i`: case insensitive
+ * `m`: multiline
+ * `x`: ignore whitespace
+
+---
+
+### Alternation (OR)
+
+`|` useful but strange precedence
+
+---
+
+### Grouping
+`()` very useful for substitutions
 ---
 
 ### Are they complicated?
