@@ -8,8 +8,8 @@
 
  * @fa[arrow-right] Next slide
  * @fa[arrow-left] Previous slide
- * *F* - Full screen
- * *O* - Thumbnail navigation
+ * <b>F</b> - Full screen
+ * /O/ - Thumbnail navigation
  * *S* - Speaker notes
 
 ---
@@ -51,14 +51,14 @@
 ### Basic matching
 
  * A letter or number matches that specific letter or number
- * Square brackets are called a 'range' and match the characters in the brackets: `[ABC]` matches `A` or `B` or `C`.
+ * `.` matches any character
+ * Ranges: match the characters in the brackets: `[ABC]` matches `A` or `B` or `C`.
  * Ranges can use a `-` as a shortcut: `[A-Z]` matches `A` or `B` or ... or `Z`.
  * Ranges can have multiple shortcuts: `[A-Z0-9]` matches any letter or number
  * Ranges that can match a `-` must have it as the first character: `[-A-Z]` matches any letter or `-`.
- * `.` matches any character
  * More advanced: [Character classes](#character-classes) are shortcuts for common ranges.
 
----
++++
 
 ### Basic Matching Examples:
 
@@ -77,23 +77,51 @@ How many times a match can/must occur.
  * `?`: zero or once
  * `*`: zero or more
  * `+`: one or more
+
++++
+
+### Quantifier Examples:
+
+|         |`AB?C`|`AB*C`|`AB+C`|
+| -----   |------|------|------|
+| AC      | yes  | yes  | no   | 
+| ABC     | yes  | yes  | yes  | 
+| ABBC    | no   | yes  | yes  |
+| ABBBC   | no   | yes  | yes  | 
+| ABBBBC  | no   | yes  | yes  |
+| ABBBBBC | no   | yes  | yes  | 
+| ABBBBBBC| no   | yes  | yes  | 
+
+---
+
+### Numeric Quantifiers
+
  * `{n}`: exactly `n` times
  * `{n,}`: `n` or more times
  * `{n,m}`: between `n` and `m` times
- * More advanced: [Non-greedy quantifiers](#nongreedy-quantifiers) affect later matches after the match
+
++++
+
+### Numeric Quantifier Examples:
+
+|         |`AB{3}C`|`AB{3,}C`|`AB{3,4}C`|
+| -----   |--------|---------|---------|
+| AC      | no     | no      | no      |
+| ABC     | no     | no      | no      |
+| ABBC    | no     | no      | no      |
+| ABBBC   | yes    | yes     | yes     |
+| ABBBBC  | no     | yes     | yes     |
+| ABBBBBC | no     | yes     | no      |
+| ABBBBBBC| no     | yes     | no      |
 
 ---
-### Quantifier Examples:
 
-|         |`AB?C`|`AB*C`|`AB+C`|`AB{3}C`|`AB{3,}C`|`AB{3,4}C`|
-| -----   |------|------|------|--------|---------|---------|
-| AC      | yes  | yes  | no   | no     | no      | no      |
-| ABC     | yes  | yes  | yes  | no     | no      | no      |
-| ABBC    | no   | yes  | yes  | no     | no      | no      |
-| ABBBC   | no   | yes  | yes  | yes    | yes     | yes     |
-| ABBBBC  | no   | yes  | yes  | no     | yes     | yes     |
-| ABBBBBC | no   | yes  | yes  | no     | yes     | no      |
-| ABBBBBBC| no   | yes  | yes  | no     | yes     | no      |
+### Greedy vs Lazy Quantifiers
+
+ * Extra `?` make it lazy
+ * Non-greedy quantifiers affect later matches after the match
+
+
 
 ---
 
