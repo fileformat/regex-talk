@@ -8,7 +8,7 @@ theme : simple
 theme-override : assets/css/PITCHME.css
 # theme-override : assets/css/PITCHME.codemax.css
 highlight : atom-one-light
-logo : https://www.vectorlogo.zone/logos/regexplanet/regexplanet-ar21.svg
+logo : https://www.vectorlogo.zone/logos/regexplanet/regexplanet-icon.svg
 transition : none
 published : true
 footnote : "Regex Lightning Talk"
