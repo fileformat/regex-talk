@@ -1,27 +1,32 @@
-# White
+# Regular Expressions
 
-### A GitPitch Presentation Template
-
----
-
-## Tips!
-
-<br>
-
-@fa[arrows gp-tip](Press F to go Fullscreen)
-
-@fa[microphone gp-tip](Press S for Speaker Notes)
+### A 5 minute overview
 
 ---
 
-## Template Features
+## Slideshow navigation
 
-- Code Presenting |
-- Repo Source, Static Blocks, GIST |
-- Custom CSS Styling |
-- Slideshow Background Image |
-- Slide-specific Background Images |
-- Custom Logo, TOC, and Footnotes |
+ * <i class="fas fa-arrow-right"></i> Next slide
+ * <i class="fas fa-arrow-left"></i> Previous slide
+ * F - Full screen
+ * O - Thumbnail navigation
+ * S - Speaker notes
+
+---
+
+### What are regular expressions?
+
+---
+
+### Are they powerful?
+
+![Obligatory XKCD Comic](https://imgs.xkcd.com/comics/regular_expressions.png)
+
+---
+
+### Are they complicated?
+
+![OMG: two XKCD Comics?](https://imgs.xkcd.com/comics/regex_golf.png)
 
 ---?code=sample/go/server.go&lang=golang&title=Golang File
 
