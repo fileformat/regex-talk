@@ -50,24 +50,40 @@
 
 ### Basic matching
 
-@ul
  * A letter or number matches that specific letter or number
  * `.` matches any character
- * `[ABC]` are ranges that match the characters in the brackets
- * `[A-Z]` shortcut.
- * `[A-Z0-9]` multiple shortcuts in a single range
- * `-` must be the first character: `[-A-Z]` matches any letter or `-`.
- * More advanced: [Character classes](#character-classes) are shortcuts for common ranges.
-@ulend
+
 +++
 
 ### Basic Matching Examples:
 
-|         |`A`   |`.`   |`[ABC]`|`[A-Z]` |
-| -----   |------|------|-------|--------|
-| A       | yes  | yes  | yes   | yes    |
-| B       | no   | yes  | yes   | yes    |
-| X       | no   | yes  | no    | yes    |
+|         |`A`   |`B`   |`.`  |
+| -----   |------|------|-----|
+| A       | yes  | no   | yes |
+| B       | no   | yes  | yes |
+| X       | no   | no   | no  |
+
+---
+
+### Ranges
+
+Square brackets are called a 'range' and match the characters in the brackets: 
+
+ * `[ABC]` matches `A` or `B` or `C`
+ * `[A-Z]` shortcut for multipe letters
+ * `[A-Z0-9]` multiple shortcuts in a single range
+ * `-` must be the first character
+
++++
+
+### Basic Matching Examples:
+
+|         |`[ABC]`|`[A-Z]` | `[-A-Z]` |
+| -----   |-------|--------|----------|
+| A       | yes   | yes    | yes      |
+| B       | yes   | yes    | yes      |
+| X       | no    | no     | yes      |
+| -       | no    | no     | yes      |
 
 ---
 

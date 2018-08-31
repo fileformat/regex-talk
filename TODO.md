@@ -5,3 +5,6 @@
  - [ ] History
  - [ ] google analytics
  - [ ] separate slideshow for examples
+ - [ ] quotes
+ - [ ] implementation-specifics
+ - [ ] negation
