@@ -28,7 +28,7 @@
  
 ---
 
-### Problems that is *NOT* good for
+### *NOT* good for:
 
  * parsing HTML
  * parsing CSV

@@ -5,7 +5,7 @@
 # https://github.com/gitpitch/gitpitch/wiki/Slideshow-Settings
 #
 theme : night
-theme-override : assets/css/regex.css
+theme-override : css/regex.css
 # theme-override : assets/css/PITCHME.css
 # theme-override : assets/css/PITCHME.codemax.css
 controls-layout: edges
