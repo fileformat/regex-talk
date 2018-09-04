@@ -9,8 +9,8 @@
  * @fa[arrow-right] Next slide
  * @fa[arrow-left] Previous slide
  * <b>F</b> - Full screen
- * /O/ - Thumbnail navigation
- * *S* - Speaker notes
+ * <b>O</b> - Thumbnail navigation
+ * <b>S</b> - Speaker notes
 
 ---
 
@@ -55,13 +55,13 @@
 
 +++
 
-### Basic Matching Examples:
+### Basic Matching Examples
 
 |         |`A`   |`B`   |`.`  |
 | -----   |------|------|-----|
 | A       | yes  | no   | yes |
 | B       | no   | yes  | yes |
-| X       | no   | no   | no  |
+| X       | no   | no   | yes |
 
 ---
 
@@ -73,16 +73,17 @@ Square brackets are called a 'range' and match the characters in the brackets:
  * `[A-Z]` shortcut for multipe letters
  * `[A-Z0-9]` multiple shortcuts in a single range
  * `-` must be the first character
+ * lots of shortcuts
 
 +++
 
-### Basic Matching Examples:
+### Range Examples
 
 |         |`[ABC]`|`[A-Z]` | `[-A-Z]` |
 | -----   |-------|--------|----------|
 | A       | yes   | yes    | yes      |
 | B       | yes   | yes    | yes      |
-| X       | no    | no     | yes      |
+| X       | no    | yes    | yes      |
 | -       | no    | no     | yes      |
 
 ---
@@ -97,7 +98,7 @@ How many times a match can/must occur.
 
 +++
 
-### Quantifier Examples:
+### Quantifier Examples
 
 |         |`AB?C`|`AB*C`|`AB+C`|
 | -----   |------|------|------|
@@ -121,7 +122,7 @@ Exactly how many times a match can/must occur.
 
 +++
 
-### Numeric Quantifier Examples:
+### Numeric Quantifier Examples
 
 |         |`AB{3}C`|`AB{3,}C`|`AB{3,4}C`|
 | -----   |--------|---------|---------|

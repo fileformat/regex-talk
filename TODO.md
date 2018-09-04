@@ -5,6 +5,10 @@
  - [ ] History
  - [ ] google analytics
  - [ ] separate slideshow for examples
+ - [ ] examples for greedy vs lazy
+ - [ ] examples (and warning) for anchors
+ - [ ] examples for OR
+ - [ ] examples for grouping
  - [ ] quotes
  - [ ] implementation-specifics
  - [ ] negation
