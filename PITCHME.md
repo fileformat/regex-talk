@@ -16,8 +16,10 @@
 
 ### Problems that they can solve
  
- * finding/normalizing manually entered data
- * multiple spellings
+ * validating manually entered data
+ * extracting data from within a string
+ * splitting strings apart
+ * normalizing multiple variations
  
 ---
 
@@ -63,7 +65,7 @@
 Square brackets are called a 'range' and match the characters in the brackets: 
 
  * `[ABC]` matches `A` or `B` or `C`
- * `[A-Z]` shortcut for multipe letters
+ * `[A-Z]` shortcut for multiple letters
  * `[A-Z0-9]` multiple shortcuts in a single range
  * `-` must be the first character
  * lots of shortcuts
