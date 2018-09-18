@@ -16,10 +16,11 @@
 
 ### Problems that they can solve
  
- * validating manually entered data
- * extracting data from within a string
- * splitting strings apart
- * normalizing multiple variations
+ * validate
+ * search and replace
+ * extract 
+ * split
+ * normalize
  
 ---
 
@@ -68,18 +69,19 @@ Square brackets are called a 'range' and match the characters in the brackets:
  * `[A-Z]` shortcut for multiple letters
  * `[A-Z0-9]` multiple shortcuts in a single range
  * `-` must be the first character
+ * `^` must not match
  * lots of shortcuts
 
 +++
 
 ### Range Examples
 
-|         |`[ABC]`|`[A-Z]` | `[-A-Z]` |
-| -----   |-------|--------|----------|
-| A       | yes   | yes    | yes      |
-| B       | yes   | yes    | yes      |
-| X       | no    | yes    | yes      |
-| -       | no    | no     | yes      |
+|         |`[ABC]`|`[A-Z]` | `[-A-Z]` |`[^AB] |
+| -----   |-------|--------|----------|-------|
+| A       | yes   | yes    | yes      | no    |
+| B       | yes   | yes    | yes      | no    |
+| X       | no    | yes    | yes      | yes   |
+| -       | no    | no     | yes      | yes   |
 
 ---
 
