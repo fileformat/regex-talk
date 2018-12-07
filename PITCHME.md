@@ -30,6 +30,14 @@
  
 ---
 
+### Where can I use them?
+ 
+ * Javascript (RegExp or //, string methods)
+ * PostgreSQL (~, ~*, !~, !~*)
+ * HTML (pattern attribute on input)
+ * shell (grep, etc)
+ * pretty much anywhere
+
 ## Let's Dive In!
 
 ---
