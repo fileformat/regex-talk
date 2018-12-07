@@ -2,7 +2,7 @@
 
 ### A 5 minute overview
 
----?include=snippet/nav.md
+<! ---?include=snippet/nav.md -->
 ---?include=snippet/quotes.md
 
 ---
@@ -29,15 +29,6 @@
  * parsing HTML
  * parsing CSV
  
----
-
-### Pros and Cons
-
- + Powerful
- + Fast
- - Learning curve
- - Complicated
-
 ---
 
 ## Let's Dive In!
@@ -76,7 +67,7 @@ Square brackets are called a 'range' and match the characters in the brackets:
 
 ### Range Examples
 
-|         |`[ABC]`|`[A-Z]` | `[-A-Z]` |`[^AB] |
+|         |`[ABC]`|`[A-Z]` | `[-A-Z]` |`[^AB]`|
 | -----   |-------|--------|----------|-------|
 | A       | yes   | yes    | yes      | no    |
 | B       | yes   | yes    | yes      | no    |
@@ -137,6 +128,10 @@ Exactly how many times a match can/must occur.
 
  * Extra `?` make it lazy
  * Non-greedy quantifiers affect later matches after the match
+ 
++++
+
+
 
 ---
 
@@ -151,6 +146,33 @@ Anchors control where a match can occur
 
 ---
 
+### Grouping
+`()` 
+
+ * building longer sequences
+ * flags that apply to multiple characters
+ * substitutions
+ 
+
+
+---
+
+### Alternatives (OR)
+
+`|` useful but strange precedence
+
++++
+
+|         | `2|two`|`^2|two$`|`^(2|two)$`|
+| -----   |--------|---------|---------|
+| 2       | yes    | yes     |yes|
+| two     | yes| yes|yes|
+| 22      | yes| yes|no|
+| twentytwo | yes| yes|no|
+
+
+---
+
 ### Modifiers
 
 DANGER: vary by implementation!
@@ -161,14 +183,11 @@ DANGER: vary by implementation!
 
 ---
 
-### Alternation (OR)
+## Examples
 
-`|` useful but strange precedence
+---?include=examples/password.md
 
----
 
-### Grouping
-`()` very useful for substitutions
 ---
 
 ### Are they complicated?
