@@ -153,17 +153,22 @@ Anchors control where a match can occur
  * flags that apply to multiple characters
  * substitutions
  
++++
 
+ * 1/11 = 0.09090909
+ * `0\.(09){1,}`
 
 ---
 
 ### Alternatives (OR)
 
-`|` useful but strange precedence
+<!-- source code note: these are not real pipe characters, since that screws up the markdown: ⎮ (U+23AE, Integral Extension) -->
+
+`⎮` useful but be careful about precedence
 
 +++
 
-|         | `2|two`|`^2|two$`|`^(2|two)$`|
+|         | `2⎮two` | `^2⎮two$` | `^(2⎮two)$` |
 | -----   |--------|---------|---------|
 | 2       | yes    | yes     |yes|
 | two     | yes| yes|yes|
@@ -184,6 +189,10 @@ DANGER: vary by implementation!
 ---
 
 ## Examples
+
+---?include=examples/zipcode.md
+
+---?include=examples/ipv4.md
 
 ---?include=examples/password.md
 

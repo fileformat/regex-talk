@@ -10,9 +10,10 @@
 
 +++
 
-## Use Lookahead!
+### Use Lookahead!
 
-+++
-
-### `(?=.*\d)(?=.*[a-zA-Z])(?=.*[\W_]).{8,}`
+ * digit: `(?=.*\d)`
+ * letter: `(?=.*[a-zA-Z])`
+ * something else: `(?=.*[^0-9a-zA-Z])`
+ * at least 8 characters: `.{8,}`
 
