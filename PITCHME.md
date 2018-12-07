@@ -2,7 +2,6 @@
 
 ### A 5 minute overview
 
-<! ---?include=snippet/nav.md -->
 ---?include=snippet/quotes.md
 
 ---
