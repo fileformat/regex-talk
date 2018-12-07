@@ -128,10 +128,17 @@ Exactly how many times a match can/must occur.
 
  * Extra `?` make it lazy
  * Non-greedy quantifiers affect later matches after the match
+ * Greedy matches as much as possible
  
 +++
 
+text: "{START}Mary{END} had a {START}little lamb{END}"
 
+`{START}.*{END}`
+greedy: one occurence, with value "Mary {END} had a {START} little lamb"
+
+`{START}.*?{END}`
+lazy: two occurences, "Mary" and "little lamb" 
 
 ---
 
@@ -154,6 +161,9 @@ Anchors control where a match can occur
  * substitutions
  
 +++
+
+ * `banana+` matches bananaaaa
+ * `(banana)+` matches bananabanana
 
  * 1/11 = 0.09090909
  * `0\.(09){1,}`
@@ -196,7 +206,17 @@ DANGER: vary by implementation!
 
 ---?include=examples/password.md
 
+---
 
+## Performance
+
+ * Surprisingly good: compiles to state machine
+ * Danger: Denial of service
+ 
++++
+
+`^(A+)*B`
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC
 ---
 
 ### Are they complicated?
