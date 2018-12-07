@@ -10,7 +10,7 @@ theme-override : css/regex.css
 # theme-override : assets/css/PITCHME.codemax.css
 controls-layout: edges
 highlight : atom-one-light
-logo : https://www.vectorlogo.zone/logos/regexplanet/regexplanet-icon.svg
+logo : http://www.regexplanet.com/images/rxp-logo-white.svg
 loop: true
 transition : none
 published : false
