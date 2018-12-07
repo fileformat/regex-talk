@@ -37,6 +37,8 @@
  * HTML (pattern attribute on input)
  * shell (grep, etc)
  * pretty much anywhere
+ 
+___
 
 ## Let's Dive In!
 
@@ -266,5 +268,9 @@ DANGER: vary by implementation!
 
 ![OMG: two XKCD Comics?](https://imgs.xkcd.com/comics/regex_golf.png)
 
-
 ---
+
+![Regex Crossword](images/regexp-crossword.jpg)
+---
+
+## The End!
