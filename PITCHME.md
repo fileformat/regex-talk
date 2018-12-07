@@ -124,24 +124,6 @@ Exactly how many times a match can/must occur.
 
 ---
 
-### Greedy vs Lazy Quantifiers
-
- * Extra `?` make it lazy
- * Non-greedy quantifiers affect later matches after the match
- * Greedy matches as much as possible
- 
-+++
-
-text: "{START}Mary{END} had a {START}little lamb{END}"
-
-`{START}.*{END}`
-greedy: one occurence, with value "Mary {END} had a {START} little lamb"
-
-`{START}.*?{END}`
-lazy: two occurences, "Mary" and "little lamb" 
-
----
-
 ### Anchors
 
 Anchors control where a match can occur
@@ -167,6 +149,10 @@ Anchors control where a match can occur
 
  * 1/11 = 0.09090909
  * `0\.(09){1,}`
+ 
+ * `"result=pass".replace(/result=(.*)/, "The test result is $1.")`
+ * The test result is pass
+ 
 
 ---
 
@@ -188,6 +174,40 @@ Anchors control where a match can occur
 
 ---
 
+### Greedy vs Lazy Quantifiers
+
+ * Extra `?` make it lazy
+ * Affect later matches after the match
+ * Greedy matches as much as possible
+ 
++++
+
+text: "{START}Mary{END} had a {START}little lamb{END}"
+
+`{START}.*{END}`
+greedy: one occurence, with value "Mary {END} had a {START} little lamb"
+
+`{START}.*?{END}`
+lazy: two occurences, "Mary" and "little lamb" 
+
+---
+
+## Lookahead &amp; Lookbehind
+
+ * doesn't change position for future
+ * ahead: next characters
+ * behind: previous characters
+ * positive (i.e. matches) or negetive (i.e. doesn't match)
+ 
++++
+
+ * `(?=foo)` next characters will be foo
+ * `(?<=foo)` previous characters were foo
+ * `(?!foo)` next characters are not foo
+ * `(?<!foo)` previous characters were not foo
+
+---
+
 ### Modifiers
 
 DANGER: vary by implementation!
@@ -206,6 +226,8 @@ DANGER: vary by implementation!
 
 ---?include=examples/password.md
 
+---?include=examples/number.md
+
 ---
 
 ## Performance
@@ -215,12 +237,27 @@ DANGER: vary by implementation!
  
 +++
 
-`^(A+)*B`
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC
+ * quantifier on a quantifier: multiplies possibilities to test for
+ * `^(A+)*B`
+ * AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC
+ 
+--- 
+
+### Best Stackoverflow ever
+
+[Parsing HTML with Regex](https://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags)
+
+---
+
+### Fun with escapes
+
+![Backslashes](https://imgs.xkcd.com/comics/backslashes.png)
+
 ---
 
 ### Are they complicated?
 
 ![OMG: two XKCD Comics?](https://imgs.xkcd.com/comics/regex_golf.png)
+
 
 ---
